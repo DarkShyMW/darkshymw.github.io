@@ -3,29 +3,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<title>Responsive 'Flat Profile' HTML Portfolio Template</title>
 	<link href="css/demo.css" rel="stylesheet" type="text/css">
 	 <link rel="stylesheet" href="css/jqbar.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/back.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
+	<link rel="stylesheet" type="text/css" href="css/back.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/simpletextrotator.css" />
-    
-    <!--[if lt IE 9]> 
+
+    <!--[if lt IE 9]>
 			<style>
-				.rw-wrapper{ display: none; } 
+				.rw-wrapper{ display: none; }
 				.rw-sentence-IE{ display: block;  }
 			</style>
 	<![endif]-->
 </head>
 <body data-post="http://www.egrappler.com/flat-responsive-portfolio-website-template-for-free-download/">
-
+<div id="particles-js"></div>
 	<div class="container topbottom">
 		<div class="row-fluid">
 
@@ -53,7 +54,7 @@
 							</li>
 						</ul>
 					</div>
-				</div> 			
+				</div>
 			</div>
 
 			<div class="span7 homeabout">
@@ -63,9 +64,9 @@
 				</div>
 				<div class="desciption home">
 					<p>Known as Johny, I am a web designer and <span class="rotate greentext">WordPress Theme Designer, WordPress Theme Developer</span> living in Pakistan with my wife and two kids. I‘m an active author at Themeforest where I enjoy spending my day in Photoshop converting custom designs into fancy pants <span class="greentext">Custom WordPress Themes</span>.</p>
-				</div>	
+				</div>
 				<div class="row">
-					<div class="span12">					
+					<div class="span12">
 						<!--Google Ad here-->
 						<div id="horizontal-ad" >
 							<script type="text/javascript"><!--
@@ -79,7 +80,7 @@
 							<script type="text/javascript"
 							src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 							</script>
-						</div>					
+						</div>
 						<div id="box-ad">
 							<script type="text/javascript"><!--
 							google_ad_client = "ca-pub-6472538845369616";
@@ -93,7 +94,7 @@
 							src="//pagead2.googlesyndication.com/pagead/show_ads.js">
 							</script>
 						</div>
-						<!--Google ad ends here-->    
+						<!--Google ad ends here-->
 					</div>
 				</div>
 				<div class="row">
@@ -107,9 +108,9 @@
 							</div>
 							<div id="bar-4">
 							</div>
-                           
+
 						</div>
-					</div>					
+					</div>
 					<div class="span6">
                     	<div class="user-tip"><img src="img/img-tip.png" alt="" /></div>
 						<div id="bars-content">
@@ -121,20 +122,22 @@
 							<div  class="content" id="content-6">A quick brown fox jumps over the lazy dog. A quick brown fox jumps over the lazy dog. A quick brown fox jumps over the lazy dog.</div>
 						</div>
 					</div>
-				</div>			
-				
+				</div>
+
 			</div>
 
 		</div>
 	</div>
+</div>
     <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="js/back.js" type="text/javascript"></script>
     <script type="text/javascript" src="../wp-content/themes/piha/js/top-bar.js" ></script>
     <script type="text/javascript" src="../wp-content/themes/piha/js/bsa-ads.js" ></script>
 	<script src="js/jqbar.js" type="text/javascript"></script>
-	
+
 	<script type="text/javascript">
-	 $(document).ready(function () {			
-		
+	 $(document).ready(function () {
+
             $('#bar-1').jqbar({ label: 'HTML5', value: 80, barColor: '#21ba82' });
 
             $('#bar-2').jqbar({ label: 'CSS', value: 99, barColor: '#21ba82' });
@@ -143,32 +146,32 @@
 
             $('#bar-4').jqbar({ label: 'WordPress', value: 75, barColor: '#21ba82' });
 
-          
-			
+
+
 			$('#bars-content .content').css({'opacity':'0',display:'none'});
 			$('#bars-content .content:eq(0)').css('display','block').animate({opacity:1},1000);
 			$('.jqbar:first').addClass('active');
 			$('.jqbar').hover(function(){ $(this).addClass('hover');},function(){ $(this).removeClass('hover');});
 			$('.jqbar').click(function(){
 				$('.jqbar').removeClass('active');
-				var id = $(this).addClass('active').attr('id').replace('bar','content');				
+				var id = $(this).addClass('active').attr('id').replace('bar','content');
 				$('#bars-content .content').css({'opacity':'0',display:'none'});
 				$('#' + id).css('display','block').animate({opacity:1},1000);
-				
-			});		
-			
+
+			});
+
 			/* $(".rotate").textrotator({
 				animation: "spin",
 				separator: ",",
 				speed: 2000
 			  });
 			*/
-			
+
         });
-		
+
     </script>
     <script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script>
   <!--Dynamically creates analytics markup-->
-  <?php include("http://www.egrappler.com/analytics.php");?>			
+  <?php include("http://www.egrappler.com/analytics.php");?>
 </body>
-</html>	
+</html>
