@@ -34,9 +34,9 @@
             fetch('https://ponysocial.ru/api/v1/pleroma/healthcheck')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('platform_version').textContent = data.version;
-                    document.getElementById('last_update_time').textContent = data.last_update;
-                    document.getElementById('errors_count').textContent = data.errors.length;
+                    document.getElementById('healthy').textContent = data.ok ? '🔴' : '🟢';
+                    document.getElementById('processed_jobs').textContent = data.job_queue_stats.processed_jobs + " Tasks";
+                    document.getElementById('memory_used').textContent = data.memory_used + " Megabytes";
                 });
         }
 
@@ -44,7 +44,7 @@
     </script>
 </head>
 <body onload="updatePlatformInfo()">
-    <h1>Положение платформы PonySocial</h1>
+    <h1>Состояние платформы PonySocial</h1>
     <table>
         <tr>
             <th>Свойство</th>
@@ -52,15 +52,19 @@
         </tr>
         <tr>
             <td>Версия платформы</td>
-            <td id="platform_version"></td>
+            <td>3.10.4-1-gebfb617b</td>
         </tr>
         <tr>
-            <td>Время последнего обновления</td>
-            <td id="last_update_time"></td>
+            <td>Состояние</td>
+            <td id="healthy"></td>
         </tr>
         <tr>
-            <td>Количество ошибок</td>
-            <td id="errors_count"></td>
+            <td>Обработано</td>
+            <td id="processed_jobs"></td>
+        </tr>
+        <tr>
+            <td>Памяти использовано</td>
+            <td id="memory_used"> Megabytes / 96 GB</td>
         </tr>
     </table>
 </body>
